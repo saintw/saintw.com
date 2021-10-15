@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body style="height: 100%; margin: 0">
+        <div id="container" style="height: 100%"></div>
+
+        <script type="text/javascript" src="js/echarts.simple.min.js"></script>
+
+        <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+
+var option;
+
+
+option = {
+  xAxis: {
+    type: 'category',
+    data: ['05', '06', '07', '08', '09']
+  },
+  yAxis: {
+    type: 'value'
+  },
+  series: [
+    {
+      data: [0, 9.38, -20.38, 0.92, 18.36],
+      type: 'line',
+      smooth: true
+    }
+  ]
+};
+
+if (option && typeof option === 'object') {
+    myChart.setOption(option);
+}
+
+        </script>
+    </body>
+</html>
+    
